@@ -116,9 +116,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   >
                     <option value="">Selecione uma opção</option>
                     <option value="Sem urgência">Sem urgência</option>
-                    <option value="Até 15 dias">Até 15 dias</option>
                     <option value="Até 30 dias">Até 30 dias</option>
-                    <option value="Mais de 30 dias">Mais de 30 dias</option>
+                    <option value="Até 60 dias">Até 60 dias</option>
+                    <option value="Acima de 60 dias">Acima de 60 dias</option>
                   </select>
                 </div>
 
@@ -132,9 +132,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     required
                   >
                     <option value="">Selecione uma opção</option>
-                    <option value="Até R$ 500">Até R$ 500</option>
-                    <option value="De R$ 500 a R$ 1.000">De R$ 500 a R$ 1.000</option>
-                    <option value="Acima de R$ 1.000">Acima de R$ 1.000</option>
+                    <option value="Até R$ 1.000">Até R$ 1.000</option>
+                    <option value="De R$ 1.000 a R$ 1.500">De R$ 1.000 a R$ 1.500</option>
+                    <option value="Acima de R$ 1.500">Acima de R$ 1.500</option>
                     <option value="Ainda não defini">Ainda não defini</option>
                   </select>
                 </div>
