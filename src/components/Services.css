@@ -1,0 +1,107 @@
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--button-radius);
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+[data-theme="personal"] .service-icon-wrapper {
+  border-radius: 4px;
+}
+
+.service-card:hover .service-icon-wrapper {
+  transform: scale(1.1);
+  box-shadow: var(--glow-effect);
+}
+
+.service-title {
+  font-family: var(--font-family-title);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+[data-theme="personal"] .service-title {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.service-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Empurra os detalhes para o rodapé do card */
+}
+
+.service-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.service-duration {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.service-price {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+[data-theme="personal"] .service-price {
+  font-style: italic;
+  font-weight: 900;
+}
+
+.service-card .btn {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+}
+
+.service-demo-link {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--button-radius);
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.service-demo-link:hover {
+  border-color: var(--secondary-color);
+  background: rgba(56, 189, 248, 0.08);
+}

@@ -1,0 +1,240 @@
+.hero {
+  min-height: 100vh;
+  padding: 8rem 0 4rem 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: var(--hero-bg-gradient);
+  transition: background 0.4s ease;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.badge-experience {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(96, 165, 250, 0.28);
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: var(--font-family-title);
+  font-size: 3.8rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.hero-title span {
+  color: var(--secondary-color);
+  display: block;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 540px;
+  font-weight: 400;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Imagem do Hero */
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.hero-image-decor {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--card-radius);
+  opacity: 0.45;
+  transition: all 0.4s ease;
+}
+
+/* Customizações de Moldura de Imagem por Tema */
+[data-theme="estetica"] .hero-image-decor {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morphing 10s infinite alternate;
+}
+
+[data-theme="estetica"] .hero-image-container {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  overflow: hidden;
+  animation: morphing 10s infinite alternate-reverse;
+  box-shadow: 0 15px 35px var(--shadow-color);
+}
+
+[data-theme="psicologia"] .hero-image-decor {
+  border-radius: var(--card-radius);
+  transform: translate(15px, 15px);
+}
+
+[data-theme="psicologia"] .hero-image-container {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: 0 15px 35px var(--shadow-color);
+}
+
+[data-theme="personal"] .hero-image-decor {
+  border-radius: 4px;
+  transform: skewX(-6deg) translate(10px, 10px);
+  background-color: var(--primary-color);
+  opacity: 0.1;
+  z-index: 1;
+}
+
+[data-theme="personal"] .hero-image-container {
+  border-radius: 4px;
+  transform: skewX(-6deg);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  box-shadow: var(--shadow-color) 0px 10px 30px;
+  border: 1px solid var(--border-color);
+}
+
+.hero-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--bg-secondary);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.42);
+  border: 1px solid rgba(96, 165, 250, 0.22);
+}
+
+[data-theme="developer"] .hero-image-wrapper {
+  aspect-ratio: 4 / 5;
+  max-width: 410px;
+}
+
+[data-theme="developer"] .hero-image-decor {
+  display: block;
+  top: 14px;
+  left: 14px;
+  border-color: rgba(56, 189, 248, 0.45);
+  background: linear-gradient(145deg, rgba(59, 130, 246, 0.2), rgba(56, 189, 248, 0.04));
+  opacity: 1;
+}
+
+[data-theme="developer"] .hero-image-container {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(5, 7, 13, 0.96));
+  border: 1px solid rgba(96, 165, 250, 0.32);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.46), 0 0 38px rgba(37, 99, 235, 0.22);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+[data-theme="developer"] .hero-img {
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+  height: 100%;
+  filter: saturate(1.03) contrast(1.03);
+  transition: transform 0.28s ease, filter 0.28s ease;
+}
+
+[data-theme="developer"] .hero-image-container:hover .hero-img {
+  transform: scale(1.035);
+  filter: saturate(1.08) contrast(1.06);
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Animação Orgânica para Estética */
+@keyframes morphing {
+  0% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
+  }
+  67% {
+    border-radius: 50% 50% 30% 70% / 60% 40% 60% 30%;
+  }
+  100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 7rem;
+    min-height: auto;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  .badge-experience {
+    align-self: center;
+  }
+  .hero-subtitle {
+    margin: 0 auto;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-image-wrapper {
+    max-width: 320px;
+  }
+
+  [data-theme="developer"] .hero-image-wrapper {
+    max-width: 340px;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
