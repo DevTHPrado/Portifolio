@@ -143,7 +143,7 @@ function App() {
   const projectTerms = [
     { icon: Mail, title: 'Alinhamento', desc: 'Uma reunião inicial e até 2 reuniões adicionais durante o desenvolvimento.' },
     { icon: ClipboardList, title: 'Escopo fechado', desc: 'Funcionalidades, prazos e itens não inclusos são definidos antes do início.' },
-    { icon: Activity, title: 'Pagamento', desc: '50% de entrada para iniciar e 50% na entrega final. Pagamento via Pix ou transferência bancária.' },
+    { icon: Activity, title: 'Pagamento', desc: '50% de entrada para iniciar e 50% na entrega final. Aceitamos Pix, transferência bancária e cartão de crédito, com parcelamento em 2x sem juros ou em até 12x com juros.' },
     { icon: Clock, title: 'Pós-entrega', desc: 'Durante 15 dias, você pode solicitar até 3 ajustes de cortesia dentro do escopo aprovado, sem limitar a garantia legal para defeitos do serviço.' },
     { icon: CheckCircle2, title: 'O que conta como ajuste', desc: 'Textos, cores, botões, fontes, responsividade e correções simples de funcionamento.' },
     { icon: Sparkles, title: 'Mudanças adicionais', desc: 'Novas telas, integrações e funcionalidades são avaliadas e cobradas separadamente.' }
@@ -237,7 +237,7 @@ function App() {
           </div>
 
           <p className="terms-note">
-            <strong>Pagamento e contratação:</strong> as formas de pagamento disponíveis no momento são Pix e transferência bancária. A contratação é combinada antes do início e pode contar com recibo ou documento aplicável ao acordo.
+            <strong>Pagamento e contratação:</strong> aceitamos Pix, transferência bancária e cartão de crédito, com parcelamento em 2x sem juros ou em até 12x com juros. A contratação é combinada antes do início e pode contar com recibo ou documento aplicável ao acordo.
             <span>Funcionalidades novas ou alterações que mudem o escopo original não fazem parte dos ajustes gratuitos e recebem um orçamento separado. Os prazos, valores e entregas só ficam confirmados após alinhamento e aceite do orçamento.</span>
           </p>
         </div>

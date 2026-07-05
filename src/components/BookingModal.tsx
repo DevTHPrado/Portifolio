@@ -194,7 +194,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               </div>
 
               <p className="commercial-notice">
-                <strong>Condições comerciais:</strong> pagamentos por Pix ou transferência bancária. Prazos, valores e entregas só ficam confirmados após análise e aceite do orçamento. A contratação pode contar com recibo ou documento aplicável ao acordo.
+                <strong>Condições comerciais:</strong> aceitamos Pix, transferência bancária e cartão de crédito, com parcelamento em 2x sem juros ou em até 12x com juros. Prazos, valores e entregas só ficam confirmados após análise e aceite do orçamento. A contratação pode contar com recibo ou documento aplicável ao acordo.
               </p>
               <p className="commercial-notice">
                 <strong>Privacidade:</strong> seus dados serão usados apenas para responder esta solicitação de orçamento pelo WhatsApp. Evite enviar senhas, dados bancários ou informações sensíveis nesta etapa.
