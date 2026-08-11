@@ -34,6 +34,18 @@ const WhatsAppIcon = ({ size = 24 }: { size?: number }) => (
   </svg>
 );
 
+const BuildingIcon = ({ size = 16, className }: { size?: number; className?: string }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+    <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+    <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+    <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+    <path d="M10 6h4" />
+    <path d="M10 10h4" />
+    <path d="M10 14h4" />
+    <path d="M10 18h4" />
+  </svg>
+);
+
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [preselectedService, setPreselectedService] = useState<string | null>(null);
@@ -354,6 +366,12 @@ function App() {
                   <Phone size={16} className="contact-icon" />
                   <a className="contact-text" href={quickWhatsappUrl} target="_blank" rel="noreferrer">+55 (11) 98873-8676</a>
                 </div>
+                {professional.cnpj && (
+                  <div className="contact-item">
+                    <BuildingIcon size={16} className="contact-icon" />
+                    <span className="contact-text">CNPJ: {professional.cnpj}</span>
+                  </div>
+                )}
                 <div className="contact-item">
                   <span className="linkedin-icon" aria-hidden="true">in</span>
                   <a className="contact-text" href="https://www.linkedin.com/in/dev-thprado" target="_blank" rel="noreferrer">linkedin.com/in/dev-thprado</a>
@@ -364,7 +382,7 @@ function App() {
 
           <div className="footer-bottom">
             <div>
-              &copy; {new Date().getFullYear()} {professional.name}. Todos os direitos reservados.
+              &copy; {new Date().getFullYear()} {professional.name}. {professional.cnpj && `CNPJ: ${professional.cnpj}. `}Todos os direitos reservados.
             </div>
             <button className="freelancer-credit-btn" onClick={handleOpenBooking}>
               Quero um projeto

@@ -17,6 +17,7 @@ export const professionalsData: Record<string, Professional> = {
     phone: '5511988738676',
     instagram: '@thiagoprado.dev',
     email: 'dev.thprado@gmail.com',
+    cnpj: '68.324.522/0001-82',
     avatarUrl: thiagoAvatar,
     heroBgGradient: 'radial-gradient(circle at top right, rgba(37, 99, 235, 0.28), transparent 34%), linear-gradient(135deg, #05070d 0%, #0b1220 48%, #151a23 100%)',
     services: [

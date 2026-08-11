@@ -32,6 +32,7 @@ export interface Professional {
   phone: string;
   instagram: string;
   email: string;
+  cnpj?: string;
   avatarUrl: string;
   heroBgGradient: string;
   services: Service[];
