@@ -1,8 +1,52 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "portfolio": {
+      "root": ".",
+      "framework": "vite",
+      "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+    },
+    "automacao-processos": {
+      "root": "projetos/automacao-processos",
+      "framework": "vite",
+      "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+    },
+    "catalogo-whatsapp": {
+      "root": "projetos/catalogo-whatsapp",
+      "framework": "vite",
+      "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+    },
+    "personal-trainer": {
+      "root": "projetos/landing-personal-trainer",
+      "framework": "vite",
+      "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+    },
+    "mini-dashboard": {
+      "root": "projetos/mini-dashboard",
+      "framework": "vite",
+      "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+    }
+  },
   "rewrites": [
     {
+      "source": "/catalogo-whatsapp/:path*",
+      "destination": { "service": "catalogo-whatsapp", "path": "/:path*" }
+    },
+    {
+      "source": "/personal-trainer/:path*",
+      "destination": { "service": "personal-trainer", "path": "/:path*" }
+    },
+    {
+      "source": "/mini-dashboard/:path*",
+      "destination": { "service": "mini-dashboard", "path": "/:path*" }
+    },
+    {
+      "source": "/automacao-processos/:path*",
+      "destination": { "service": "automacao-processos", "path": "/:path*" }
+    },
+    {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": { "service": "portfolio" }
     }
   ]
 }
